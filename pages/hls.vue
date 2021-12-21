@@ -118,7 +118,7 @@
             <div class="h-16 flex items-center justify-between">
               <!-- Logo (lg+) -->
               <div class="hidden lg:flex-1 lg:flex lg:items-center">
-                <a href="#">
+                <a href="/">
                   <span class="sr-only">Workflow</span>
                   <img class="h-8 w-auto" src="https://ix-www.imgix.net/press/imgix-press-kit.pdf?page=5&w=100&fm=png" alt="imgix logo" />
                 </a>
@@ -185,7 +185,7 @@
               </div>
 
               <!-- Logo (lg-) -->
-              <a href="#" class="lg:hidden">
+              <a href="/" class="lg:hidden">
                 <span class="sr-only">Workflow</span>
                 <img src="https://ix-www.imgix.net/press/imgix-press-kit.pdf?page=2&w=100&fm=png" alt="" class="h-8 w-auto" />
               </a>
@@ -250,7 +250,7 @@
             <div class="w-full bg-white h-48" />
           </div>
           <div class="relative py-32">
-            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">imgix MP4</h1>
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">imgix HLS</h1>
             <div class="mt-4 sm:mt-6">
               <a href="#" class="inline-block bg-indigo-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-indigo-700">Check Gifts</a>
             </div>
@@ -501,7 +501,7 @@ const navigation = {
     },
   ],
   pages: [
-    { name: 'MP4', href: '#' },
+    { name: 'MP4', href: '/' },
     { name: 'HLS', href: '/hls' },
   ],
 }
