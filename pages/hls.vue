@@ -229,8 +229,8 @@
               <!--
               <img src="https://ix-www.imgix.net/press/imgixcollage.jpg?crop=focal&fit=crop&q=70&markpad=0&markalign=middle%2Ccenter&mark64=aHR0cHM6Ly9hc3NldHMuaW1naXgubmV0L3ByZXNza2l0L2ltZ2l4LXByZXNza2l0LnBkZj9mbT1wbmcmcGFnZT00&bm=normal&usm=2O&chromasub=444&blend64=OTkwQzMyNDk&w=1820&h=678" alt="" class="w-full h-full object-center object-cover" /> 
               -->
-              <video muted autoplay loop>
-                <source src="https://tom.imgix.net/imgix_unwrapping.mp4" type="video/mp4">
+              <video ref="videoStreaming" muted autoplay loop>
+                <source src="">
               </video>
             </div>
             <div class="absolute inset-0 bg-gray-900 opacity-50" />
@@ -420,6 +420,7 @@
 
 <script>
 import { ref } from 'vue'
+import Hls from "hls.js";
 import {
   Dialog,
   DialogOverlay,
@@ -634,6 +635,36 @@ export default {
     SearchIcon,
     ShoppingBagIcon,
     XIcon,
+  },
+  mounted() {
+    this.videoStreaming();
+  },
+  methods: {
+    videoStreaming() {
+      var url = "https://tom.imgix.video/imgix_unwrapping.mp4?fm=hls";
+      const video = this.$refs.videoStreaming;
+      console.log("tage video", video);
+      const defaultOptions = {};
+      if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(url);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+          const availableQualities = hls.levels.map(l => l.height);
+          defaultOptions.quality = {
+            default: availableQualities[0],
+            options: availableQualities,
+            forced: true,
+            onChange: e => updateQuality(e)
+          };
+          new Plyr(video, defaultOptions);
+        });
+
+        hls.attachMedia(video);
+        window.hls = hls;
+      } else {
+        new Plyr(video, defaultOptions);
+      }
+    }
   },
   setup() {
     const open = ref(false)
