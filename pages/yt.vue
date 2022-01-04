@@ -226,23 +226,6 @@
         <div aria-hidden="true" class="hidden absolute inset-0 sm:flex sm:flex-col">
           <div class="flex-1 relative w-full bg-gray-800">
             <div class="absolute inset-0 overflow-hidden">
-              <!--
-              <img src="https://ix-www.imgix.net/press/imgixcollage.jpg?crop=focal&fit=crop&q=70&markpad=0&markalign=middle%2Ccenter&mark64=aHR0cHM6Ly9hc3NldHMuaW1naXgubmV0L3ByZXNza2l0L2ltZ2l4LXByZXNza2l0LnBkZj9mbT1wbmcmcGFnZT00&bm=normal&usm=2O&chromasub=444&blend64=OTkwQzMyNDk&w=1820&h=678" alt="" class="w-full h-full object-center object-cover" /> 
-              
-              <video muted autoplay loop class="w-full">
-                <source src="https://tom.imgix.net/imgix_unwrapping.mp4" type="video/mp4">
-              </video>
-              <vue-plyr>
-                  <div class="w-full" data-plyr-provider="youtube" data-plyr-embed-id="1HyeRonCz7I"></div>
-              </vue-plyr>
-              <vue-plyr>
-                  <div class="plyr_video-embed w-full">
-                      <iframe
-                        src="https://www.youtube.com/embed/1HyeRonCz7I?autoplay=1"
-                        allow="autoplay"
-                        >
-                  </div>
-              </vue-plyr>-->
               <iframe
                 class="modest-vid-embed__item w-full h-full"
                 src="https://www.youtube.com/embed/1HyeRonCz7I?mute=1&autoplay=1&modestbranding=1&loop=1&rel=0&amp;controls=0&amp;showinfo=0&playlist=1HyeRonCz7I"
@@ -261,7 +244,7 @@
           <div aria-hidden="true" class="absolute inset-0 flex flex-col sm:hidden">
             <div class="flex-1 relative w-full bg-gray-800">
               <div class="absolute inset-0 overflow-hidden">
-                <img src="https://ix-www.imgix.net/press/imgixcollage.jpg?crop=focal&fit=crop&q=70&markpad=0&markalign=middle%2Ccenter&mark64=aHR0cHM6Ly9hc3NldHMuaW1naXgubmV0L3ByZXNza2l0L2ltZ2l4LXByZXNza2l0LnBkZj9mbT1wbmcmcGFnZT00&bm=normal&usm=2O&chromasub=444&blend64=OTkwQzMyNDk&w=640&h=550&dpr=2&auto=format" alt="" class="w-full h-full object-center object-cover" />
+                <img src="https://ix-www.imgix.net/press/imgixcollage.jpg?crop=focal&fit=crop&q=70&markpad=0&markalign=middle%2Ccenter&mark64=aHR0cHM6Ly9hc3NldHMuaW1naXgubmV0L3ByZXNza2l0L2ltZ2l4LXByZXNza2l0LnBkZj9mbT1wbmcmcGFnZT00&bm=normal&usm=2O&chromasub=444&blend64=OTkwQzMyNDk&w=640&h=550&dpr=2&auto=format" alt="" class="w-full h-full object-center object-cover" width="37" height="32"/>
               </div>
               <div class="absolute inset-0 bg-gray-900 opacity-50" />
             </div>
