@@ -22,7 +22,7 @@
                 <TabList class="-mb-px flex px-4 space-x-8">
                   <Tab as="template" v-for="category in navigation.categories" :key="category.name" v-slot="{ selected }">
                     <button :class="[selected ? 'text-indigo-600 border-indigo-600' : 'text-gray-900 border-transparent', 'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-base font-medium']">
-                      {{ category.name }}
+                        {{ category.name }}
                     </button>
                   </Tab>
                 </TabList>
@@ -118,7 +118,7 @@
             <div class="h-16 flex items-center justify-between">
               <!-- Logo (lg+) -->
               <div class="hidden lg:flex-1 lg:flex lg:items-center">
-                <a href="#">
+                <a href="/">
                   <span class="sr-only">Workflow</span>
                   <img class="h-8 w-auto" src="https://ix-www.imgix.net/press/imgix-press-kit.pdf?page=5&w=100&fm=png" alt="imgix logo" />
                 </a>
@@ -185,7 +185,7 @@
               </div>
 
               <!-- Logo (lg-) -->
-              <a href="#" class="lg:hidden">
+              <a href="/" class="lg:hidden">
                 <span class="sr-only">Workflow</span>
                 <img src="https://ix-www.imgix.net/press/imgix-press-kit.pdf?page=2&w=100&fm=png" alt="" class="h-8 w-auto" />
               </a>
@@ -229,8 +229,8 @@
               <!--
               <img src="https://ix-www.imgix.net/press/imgixcollage.jpg?crop=focal&fit=crop&q=70&markpad=0&markalign=middle%2Ccenter&mark64=aHR0cHM6Ly9hc3NldHMuaW1naXgubmV0L3ByZXNza2l0L2ltZ2l4LXByZXNza2l0LnBkZj9mbT1wbmcmcGFnZT00&bm=normal&usm=2O&chromasub=444&blend64=OTkwQzMyNDk&w=1820&h=678" alt="" class="w-full h-full object-center object-cover" /> 
               -->
-              <video muted autoplay loop class="w-full">
-                <source src="https://tom.imgix.net/imgix_unwrapping.mp4" type="video/mp4">
+              <video ref="videoStreaming" muted autoplay loop class="w-full">
+                <source src="">
               </video>
             </div>
             <div class="absolute inset-0 bg-gray-900 opacity-50" />
@@ -250,7 +250,7 @@
             <div class="w-full bg-white h-48" />
           </div>
           <div class="relative py-32">
-            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">imgix MP4</h1>
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">HLS Sized Full Width</h1>
             <div class="mt-4 sm:mt-6">
               <a href="#" class="inline-block bg-indigo-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-indigo-700">Check Gifts</a>
             </div>
@@ -420,6 +420,7 @@
 
 <script>
 import { ref } from 'vue'
+import Hls from "hls.js";
 import {
   Dialog,
   DialogOverlay,
@@ -575,6 +576,36 @@ export default {
     SearchIcon,
     ShoppingBagIcon,
     XIcon,
+  },
+  mounted() {
+    this.videoStreaming();
+  },
+  methods: {
+    videoStreaming() {
+      var url = "https://tom.imgix.video/imgix_unwrapping.mp4?fm=hls";
+      const video = this.$refs.videoStreaming;
+      console.log("tage video", video);
+      const defaultOptions = {};
+      if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(url);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+          const availableQualities = hls.levels.map(l => l.height);
+          defaultOptions.quality = {
+            default: availableQualities[0],
+            options: availableQualities,
+            forced: true,
+            onChange: e => updateQuality(e)
+          };
+          new Plyr(video, defaultOptions);
+        });
+
+        hls.attachMedia(video);
+        window.hls = hls;
+      } else {
+        new Plyr(video, defaultOptions);
+      }
+    }
   },
   setup() {
     const open = ref(false)

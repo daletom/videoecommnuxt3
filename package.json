@@ -11,6 +11,10 @@
     "autoprefixer": "^10.4.0",
     "nuxt3": "latest",
     "postcss": "^8.4.5",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.45.2",
+    "sass-loader": "^10.2.0",
     "tailwindcss": "^3.0.7"
   },
   "dependencies": {

@@ -228,10 +228,28 @@
             <div class="absolute inset-0 overflow-hidden">
               <!--
               <img src="https://ix-www.imgix.net/press/imgixcollage.jpg?crop=focal&fit=crop&q=70&markpad=0&markalign=middle%2Ccenter&mark64=aHR0cHM6Ly9hc3NldHMuaW1naXgubmV0L3ByZXNza2l0L2ltZ2l4LXByZXNza2l0LnBkZj9mbT1wbmcmcGFnZT00&bm=normal&usm=2O&chromasub=444&blend64=OTkwQzMyNDk&w=1820&h=678" alt="" class="w-full h-full object-center object-cover" /> 
-              -->
+              
               <video muted autoplay loop class="w-full">
                 <source src="https://tom.imgix.net/imgix_unwrapping.mp4" type="video/mp4">
               </video>
+              <vue-plyr>
+                  <div class="w-full" data-plyr-provider="youtube" data-plyr-embed-id="1HyeRonCz7I"></div>
+              </vue-plyr>
+              <vue-plyr>
+                  <div class="plyr_video-embed w-full">
+                      <iframe
+                        src="https://www.youtube.com/embed/1HyeRonCz7I?autoplay=1"
+                        allow="autoplay"
+                        >
+                  </div>
+              </vue-plyr>-->
+              <iframe
+                class="modest-vid-embed__item w-full h-full"
+                src="https://www.youtube.com/embed/1HyeRonCz7I?mute=1&autoplay=1&modestbranding=1&loop=1&rel=0&amp;controls=0&amp;showinfo=0&playlist=1HyeRonCz7I"
+                frameborder="0"
+                allowfullscreen
+              >
+              </iframe>
             </div>
             <div class="absolute inset-0 bg-gray-900 opacity-50" />
           </div>
@@ -250,7 +268,7 @@
             <div class="w-full bg-white h-48" />
           </div>
           <div class="relative py-32">
-            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">imgix MP4</h1>
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">Youtube</h1>
             <div class="mt-4 sm:mt-6">
               <a href="#" class="inline-block bg-indigo-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-indigo-700">Check Gifts</a>
             </div>
@@ -417,9 +435,11 @@
     </footer>
   </div>
 </template>
-
 <script>
 import { ref } from 'vue'
+//import Hls from "hls.js";
+//import VuePlyr from 'vue-plyr'
+//import 'vue-plyr/dist/vue-plyr.css'
 import {
   Dialog,
   DialogOverlay,
