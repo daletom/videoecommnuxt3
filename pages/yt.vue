@@ -471,19 +471,19 @@ const collections = [
     name: "Home Goods",
     href: '#',
     imageSrc: 'https://images.prismic.io/tdecomm21/3e7084a4-04d6-44b0-bc45-ecaed8586c0b_ix_coffee_maker.png?w=384&dpr=2&auto=format,compress&cs=srgb',
-    imageAlt: 'Woman wearing a comfortable cotton t-shirt.',
+    imageAlt: 'A compact coffee maker.',
   },
   {
     name: "Shirts",
     href: '#',
     imageSrc: 'https://images.prismic.io/tdecomm21/de0680b1-d97e-464b-bc34-0e78a03f1e7c_ix_grey_shirt.png?w=384&dpr=2&auto=format,compress&cs=srgb',
-    imageAlt: 'Man wearing a comfortable and casual cotton t-shirt.',
+    imageAlt: 'A comfortable and casual cotton t-shirt.',
   },
   {
     name: 'Desk Accessories',
     href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-04-collection-03.jpg',
-    imageAlt: 'Person sitting at a wooden desk with paper note organizer, pencil and tablet.',
+    imageSrc: 'https://images.unsplash.com/photo-1494173853739-c21f58b16055?&auto=format,compress&w=384&dpr=2&cs=srgb',
+    imageAlt: 'Desktop items and a computer.',
   },
 ]
 const trendingProducts = [
