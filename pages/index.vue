@@ -250,7 +250,7 @@
             <div class="w-full bg-white h-48" />
           </div>
           <div class="relative py-32">
-            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">imgix MP4</h1>
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">MP4 with a CDN</h1>
             <div class="mt-4 sm:mt-6">
               <a href="#" class="inline-block bg-indigo-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-indigo-700">Check Gifts</a>
             </div>
