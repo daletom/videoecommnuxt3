@@ -264,7 +264,13 @@
               <div>
                 <div aria-hidden="true" class="absolute inset-0 rounded-lg overflow-hidden">
                   <div class="absolute inset-0 overflow-hidden group-hover:opacity-75">
-                    <img :src="collection.imageSrc" :alt="collection.imageAlt" class="w-full h-full object-center object-cover" />
+                    <img
+                      :src="collection.imageSrc"
+                      :alt="collection.imageAlt"
+                      class="w-full h-full object-center object-cover"
+                      width="384"
+                      height="480"
+                    />
                   </div>
                   <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50" />
                 </div>
@@ -297,7 +303,14 @@
           <div class="mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-8">
             <div v-for="product in trendingProducts" :key="product.id" class="group relative">
               <div class="w-full h-56 rounded-md overflow-hidden group-hover:opacity-75 lg:h-72 xl:h-80">
-                <img :src="product.imageSrc" :alt="product.imageAlt" class="w-full h-full object-center object-cover" />
+                <img
+                  :src="product.imageSrc"
+                  :srcset="product.imageSrc + ' 1x, ' + product.imageSrc + '&dpr2 2x, ' + product.imageSrc + '&dpr=2.5 3x'"
+                  :alt="product.imageAlt"
+                  class="w-full h-full object-center object-cover"
+                  width="280"
+                  height="320"
+                />
               </div>
               <h3 class="mt-4 text-sm text-gray-700">
                 <a :href="product.href">
@@ -324,7 +337,7 @@
             <div v-for="perk in perks" :key="perk.name" class="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
               <div class="md:flex-shrink-0">
                 <div class="flow-root">
-                  <img class="-my-1 h-24 w-auto mx-auto" :src="perk.imageUrl" alt="" />
+                  <img class="-my-1 h-24 w-auto mx-auto" :src="perk.imageUrl" alt="" width="112" height="96" />
                 </div>
               </div>
               <div class="mt-6 md:mt-0 md:ml-4 lg:mt-6 lg:ml-0">
@@ -451,19 +464,19 @@ const collections = [
   {
     name: "Home Goods",
     href: '#',
-    imageSrc: 'https://images.prismic.io/tdecomm21/3e7084a4-04d6-44b0-bc45-ecaed8586c0b_ix_coffee_maker.png?w=384&dpr=2&auto=format,compress&cs=srgb',
+    imageSrc: 'https://images.prismic.io/tdecomm21/3e7084a4-04d6-44b0-bc45-ecaed8586c0b_ix_coffee_maker.png?w=384&auto=format,compress&cs=srgb',
     imageAlt: 'A compact coffee maker.',
   },
   {
     name: "Shirts",
     href: '#',
-    imageSrc: 'https://images.prismic.io/tdecomm21/de0680b1-d97e-464b-bc34-0e78a03f1e7c_ix_grey_shirt.png?w=384&dpr=2&auto=format,compress&cs=srgb',
+    imageSrc: 'https://images.prismic.io/tdecomm21/de0680b1-d97e-464b-bc34-0e78a03f1e7c_ix_grey_shirt.png?w=384&auto=format,compress&cs=srgb',
     imageAlt: 'A comfortable and casual cotton t-shirt.',
   },
   {
     name: 'Desk Accessories',
     href: '#',
-    imageSrc: 'https://images.unsplash.com/photo-1494173853739-c21f58b16055?&auto=format,compress&w=384&dpr=2&cs=srgb',
+    imageSrc: 'https://images.unsplash.com/photo-1494173853739-c21f58b16055?&auto=format,compress&w=384&cs=srgb',
     imageAlt: 'Desktop items and a computer.',
   },
 ]
@@ -474,7 +487,7 @@ const trendingProducts = [
     color: 'Holographic',
     price: '$2',
     href: '#',
-    imageSrc: 'https://tom.imgix.net/examples/ecomm/ix_holo_sticker.jpg?w=280&h=320&fit=crop&crop=edges&dpr=2&auto=format,compress&cs=srgb',
+    imageSrc: 'https://tom.imgix.net/examples/ecomm/ix_holo_sticker.jpg?w=280&h=320&fit=crop&crop=edges&auto=format,compress&cs=srgb',
     imageAlt: 'Holographic Stickers',
   },
   {
@@ -483,7 +496,7 @@ const trendingProducts = [
     color: 'Blue',
     price: '$12',
     href: '#',
-    imageSrc: 'https://tom.imgix.net/examples/ecomm/ix_coffee_mug.png?bg=gray&w=280&h=320&fit=crop&crop=edges&dpr=2&auto=format,compress&cs=srgb',
+    imageSrc: 'https://tom.imgix.net/examples/ecomm/ix_coffee_mug.png?bg=gray&w=280&h=320&fit=crop&crop=edges&auto=format,compress&cs=srgb',
     imageAlt: 'Left Handed Coffee Mug',
   },
   {
@@ -492,7 +505,7 @@ const trendingProducts = [
     color: 'Black with Blue Stripe',
     price: '$42',
     href: '#',
-    imageSrc: 'https://tom.imgix.net/examples/ecomm/ix_gamer_jersey.png?bg=gray&w=280&h=320&fit=crop&dpr=2&auto=format,compress&cs=srgb',
+    imageSrc: 'https://tom.imgix.net/examples/ecomm/ix_gamer_jersey.png?bg=gray&w=280&h=320&fit=crop&auto=format,compress&cs=srgb',
     imageAlt: '423 Gamer Jersey',
   },
   {
