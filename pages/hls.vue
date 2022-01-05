@@ -237,12 +237,10 @@
 
         <div class="relative max-w-3xl mx-auto pb-96 px-4 text-center sm:pb-0 sm:px-6 lg:px-8">
           <!-- Background image and overlap -->
-          <div aria-hidden="true" class="absolute inset-0 flex flex-col sm:hidden h-2/3">
+          <div aria-hidden="true" class="absolute inset-0 flex flex-col sm:hidden">
             <div class="flex-1 relative w-full bg-gray-800">
               <div class="absolute inset-0 overflow-hidden">
-                <video ref="videoStreaming" muted autoplay loop>
-                  <source src="">
-                </video>
+                <img src="https://ix-www.imgix.net/press/imgixcollage.jpg?crop=focal&fit=crop&q=70&markpad=0&markalign=middle%2Ccenter&mark64=aHR0cHM6Ly9hc3NldHMuaW1naXgubmV0L3ByZXNza2l0L2ltZ2l4LXByZXNza2l0LnBkZj9mbT1wbmcmcGFnZT00&bm=normal&usm=2O&chromasub=444&blend64=OTkwQzMyNDk&w=375&h=554&dpr=2&auto=format,compress" alt="" width="375" height="554" class="w-full h-full object-center object-cover" />
               </div>
               <div class="absolute inset-0 bg-gray-900 opacity-50" />
             </div>
