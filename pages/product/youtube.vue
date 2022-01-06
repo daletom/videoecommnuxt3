@@ -333,6 +333,7 @@
                 frameborder="0"
                 allowfullscreen
               >
+              </iframe>
             </div>
             <p class="mt-8 text-base text-gray-500">The 20L model has enough space for 370 candy bars, 6 cylinders of chips, 1220 standard gumballs, or any combination of on-the-go treats that your heart desires. Yes, we did the math.</p>
           </div>
