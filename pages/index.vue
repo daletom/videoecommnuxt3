@@ -118,7 +118,7 @@
             <div class="h-16 flex items-center justify-between">
               <!-- Logo (lg+) -->
               <div class="hidden lg:flex-1 lg:flex lg:items-center">
-                <a href="#">
+                <a href="/">
                   <span class="sr-only">Workflow</span>
                   <img class="h-8 w-auto" src="https://ix-www.imgix.net/press/imgix-press-kit.pdf?page=5&w=100&fm=png" alt="imgix logo" />
                 </a>
@@ -185,7 +185,7 @@
               </div>
 
               <!-- Logo (lg-) -->
-              <a href="#" class="lg:hidden">
+              <a href="/" class="lg:hidden">
                 <span class="sr-only">Workflow</span>
                 <img src="https://ix-www.imgix.net/press/imgix-press-kit.pdf?page=2&w=100&fm=png" alt="" class="h-8 w-auto" />
               </a>
@@ -483,7 +483,7 @@ const trendingProducts = [
     name: 'Holographic Stickers',
     color: 'Holographic',
     price: '$2',
-    href: '#',
+    href: '/product/mp4',
     imageSrc: 'https://tom.imgix.net/examples/ecomm/ix_holo_sticker.jpg?w=280&h=320&fit=crop&crop=edges&auto=format,compress&cs=srgb',
     imageAlt: 'Holographic Stickers',
   },

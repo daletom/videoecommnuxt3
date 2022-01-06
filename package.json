@@ -20,6 +20,7 @@
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.0",
     "hls.js": "^1.1.2",
     "plyr": "^3.6.12",
     "vue-plyr": "^7.0.0"
