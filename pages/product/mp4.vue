@@ -492,8 +492,7 @@ import { StarIcon } from '@heroicons/vue/solid'
 const navigation = {
   pages: [
     { name: 'MP4', href: '/product/mp4' },
-    { name: 'HLS', href: '/hls' },
-    { name: 'HLS W-full', href: '/hlsw' },
+    { name: 'HLS', href: '/product/hls' },
     { name: 'Youtube', href: '/product/youtube' },
   ],
 }

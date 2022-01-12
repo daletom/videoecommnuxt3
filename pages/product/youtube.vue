@@ -329,7 +329,7 @@
             <div class="w-full aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
               <iframe
                 class="modest-vid-embed__item w-full h-full"
-                src="https://www.youtube.com/embed/1HyeRonCz7I?mute=1&autoplay=0&modestbranding=1&loop=1&rel=0&amp;controls=1&amp;showinfo=0&playlist=1HyeRonCz7I"
+                src="https://www.youtube.com/embed/1HyeRonCz7I?mute=1&autoplay=0&modestbranding=1&loop=0&rel=0&amp;controls=1&amp;showinfo=0"
                 frameborder="0"
                 allowfullscreen
               >
@@ -496,8 +496,7 @@ import { StarIcon } from '@heroicons/vue/solid'
 const navigation = {
   pages: [
     { name: 'MP4', href: '/product/mp4' },
-    { name: 'HLS', href: '/hls' },
-    { name: 'HLS W-full', href: '/hlsw' },
+    { name: 'HLS', href: '/product/hls' },
     { name: 'Youtube', href: '/product/youtube' },
   ],
 }

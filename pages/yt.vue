@@ -466,7 +466,7 @@ const navigation = {
     { name: 'MP4', href: '/' },
     { name: 'HLS', href: '/hls' },
     { name: 'HLS W-full', href: '/hlsw' },
-    { name: 'Youtube', href: '/yt' },
+    { name: 'Youtube', href: '/product/youtube' },
   ],
 }
 const collections = [
